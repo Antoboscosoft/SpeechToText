@@ -47,6 +47,16 @@ function SpeechPOC() {
             // stopListening();
 
             SpeechRecognition.stopListening();
+            // Use debouncedStopListening instead of SpeechRecognition.stopListening
+            const debounce = (func, delay) => {
+                let timer;
+                return (...args) => {
+                  clearTimeout(timer);
+                  timer = setTimeout(() => func(...args), delay);
+                };
+              };
+            const debouncedStopListening = debounce(SpeechRecognition.stopListening, 1000);
+
 
             setIsRecognizing(false);
             setInstructions('Voice recognition paused.');
@@ -54,7 +64,12 @@ function SpeechPOC() {
 
         } else {
             // startListening();
-            SpeechRecognition.startListening({ continuous: true });
+            SpeechRecognition.startListening({ 
+                continuous: true,      // Keep listening
+                interimResults: true,  // Show interim results
+                lang: 'en-US',         // Specify the language
+
+            });
 
             setIsRecognizing(true);
             setInstructions('Voice recognition activated. Try speaking into the microphone.');
