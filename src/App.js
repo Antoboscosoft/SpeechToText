@@ -6,6 +6,11 @@ import TestImpl from './SpeechText/TestImpl';
 import Testing from './SpeechText/Testing';
 import SpeechPOC from './SpeechText/SpeechPOC';
 import { useState } from 'react';
+import S1 from './SpeechText/S1';
+import S2 from './SpeechText/S2';
+import S3 from './SpeechText/S3';
+import S4 from './SpeechText/S4';
+import S5 from './SpeechText/S5';
 
 function App() {
 
@@ -44,7 +49,12 @@ function App() {
         {/* <SpeechComponent/> */}
         {/* <Transaction /> */}
         {/* <Testing /> */}
-        <SpeechPOC />
+        {/* <SpeechPOC /> */}
+        {/* <S1/> */}
+        {/* <S2/> */}
+        <S3/>
+        {/* <S4/> */}
+        {/* <S5/> */}
         {/* <TestImpl/> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>

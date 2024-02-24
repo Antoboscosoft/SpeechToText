@@ -116,7 +116,7 @@
   font-family: 'Times New Roman', Times, serif;
   transform: skewX(12deg);
 
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  /* animation: up-down 2s ease-in-out infinite alternate-reverse both; */
 
 }
 @keyframes up-down {
